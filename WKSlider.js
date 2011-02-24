@@ -108,7 +108,7 @@
 			this.knob.style.webkitTransform = 'translate3d(' + x + 'px, 0, 0)';
 		}
 		else {
-			this.knob.left = x + 'px';
+			this.knob.style.left = x + 'px';
 		}
 	
 		//return value change as a percentage
