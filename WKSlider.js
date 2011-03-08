@@ -114,7 +114,6 @@
 	
 		//return value change as a percentage
 		var percentage = Math.round(x  / (this.trackWidth - this.knobWidth) * 100);
-		console.log(percentage);
 		this.callback(percentage);
 	};
 
