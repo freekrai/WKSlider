@@ -46,6 +46,6 @@
 	background: -webkit-gradient(linear, left top, left bottom, from(rgb(253,253,253)), to(rgb(190,190,190)));
 	background: -moz-linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
 	border: 1px solid rgb(160,160,160);
-	-webkit-transform: translate3d(0,0,0);
+	cursor: pointer;
 }
 

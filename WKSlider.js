@@ -20,7 +20,7 @@
 
 		//get knob width	
 		this.knob = this.element.getElementsByClassName('knob')[0];
-		this.knobWidth = this.knob.offsetWidth;
+		this.knobWidth = this.knob.offsetWidth - 2;
 	
 		//get track width
 		this.track = this.element.getElementsByClassName('track')[0];
@@ -74,7 +74,7 @@
 
 		e.preventDefault();
 
-		this.moveKnobTo(e.pageX);
+		this.moveKnobTo(e.clientX);
 	
 		this.element.addEventListener('mousemove', this, false);
 		this.element.addEventListener('mouseup', this, false);
@@ -99,7 +99,8 @@
 
 	//moves the slider
 	WKSlider.prototype.moveKnobTo = function(x) {
-
+	
+		x = x - this.element.offsetLeft;
 		x = Math.min(x, this.trackWidth);
 		x = Math.max(x - this.knobWidth, 0);
 	
@@ -113,6 +114,7 @@
 	
 		//return value change as a percentage
 		var percentage = Math.round(x  / (this.trackWidth - this.knobWidth) * 100);
+		console.log(percentage);
 		this.callback(percentage);
 	};
 

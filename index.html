@@ -22,38 +22,46 @@
 </head>
 <body>
 
-<div id="mySlider1" class="slider">
+<div id="slider1" class="slider">
+
 	<div class="track"></div>
-	<div class="knob"></div>
+	<div class="knob" role="slider"></div>
+	
 </div>
 
-<p><span id="mySlider1-output">0</span>%</p>
+<p><span id="slider1-output">0</span>%</p>
 
-<div id="mySlider2" class="slider">
+<div id="slider2" class="slider">
+
 	<div class="track"></div>
-	<div class="knob"></div>
+	<div class="knob" role="slider"></div>
+	
 </div>
 
-<p><span id="mySlider2-output">0</span>%</p>
+<p><span id="slider2-output">0</span>%</p>
 
 <script type="text/javascript">
 
 //slider 1
-var mySlider1 = new WKSlider('mySlider1');
+var mySlider1 = new WKSlider('slider1');
+
+var output1 = document.getElementById('slider1-output');
 
 //slider 1 callback
 mySlider1.callback = function (percentage) {
 
-	document.getElementById('mySlider1-output').innerHTML = percentage;
+	output1.innerHTML = percentage;
 }
 
 //slider 2
-var mySlider2 = new WKSlider('mySlider2');
+var mySlider2 = new WKSlider('slider2');
+
+var output2 = document.getElementById('slider2-output');
 
 //slider 2 callback
 mySlider2.callback = function (percentage) {
 
-	document.getElementById('mySlider2-output').innerHTML = percentage;
+	output2.innerHTML = percentage;
 }
 
 
