@@ -106,10 +106,11 @@
 	
 		//use Webkit CSS 3d transforms for hardware acceleration if available 
 		if (this.supportsWebkit3dTransform) {
+		
 			this.knob.style.webkitTransform = 'translate3d(' + x + 'px, 0, 0)';
 		}
 		else {
-			this.knob.style.left = x + 'px';
+			this.knob.style.webkitTransform = this.knob.style.MozTransform = this.knob.style.msTransform = this.knob.style.OTransform = this.knob.style.transform = 'translateX(' + x + 'px)';
 		}
 	
 		//return value change as a percentage

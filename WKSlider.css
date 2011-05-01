@@ -42,9 +42,13 @@
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
 	border-radius: 25px; 
-	background: rgb(253,253,253);
-	background: -webkit-gradient(linear, left top, left bottom, from(rgb(253,253,253)), to(rgb(190,190,190)));
+	background: rgb(253,253,253);	
 	background: -moz-linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(253,253,253)), to(rgb(190,190,190)));
+	background: -webkit-linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
+	background: -ms-linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
+	background: -o-linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
+	background: linear-gradient(top, rgb(253,253,253), rgb(190,190,190));
 	border: 1px solid rgb(160,160,160);
 	cursor: pointer;
 }
